@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Fact of the Day App</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap">
+    <script src="/static/js/htmx.min.js"></script>
+</head>
+<body hx-boost="true">
+<main>
+    <header>
+        <h1>Facts of the Day</h1>
+        <h2>A Demo Fact App</h2>
+    </header>
+    <div class="gradient"></div>
+    {% block facts_section %}{% endblock %}
+    <div class="gradient"></div>
+    {% include 'long_runner.html' %}
+    <div class="gradient"></div>
+    <section class="event-observer">
+        <!--        <script>-->
+        <!--            window.addEventListener('htmx:load', (e) => {-->
+        <!--            console.log(e);-->
+        <!--            document.getElementsByClassName("event-observer")[0].textContent = e.target.innerText;-->
+        <!--            });-->
+        <!--        </script>-->
+    </section>
+    <section class="counter">
+        <output id="my-output">0</output>
+        <button
+                onclick="document.querySelector('#my-output').textContent++ "
+        >Increment
+        </button>
+    </section>
+    <div class="gradient"></div>
+    <footer>
+        {{ fact_number }} Facts available.
+        <p><small>© 2023 Affo. All rites reversed.</small></p>
+    </footer>
+</main>
+</body>
+</html>

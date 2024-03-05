@@ -1,0 +1,22 @@
+{
+  "fact_items": [
+    {
+      "cat": "physics",
+      "fact_id": 171,
+      "fact_rank": 1,
+      "subcat": [
+        "astrophysics"
+      ],
+      "text": "Verona Rupes: Klippe des Uranusmondes Miranda, 20 km hoch (obwohl Mond nur 471km Durchmesser)"
+    },
+    {
+      "cat": "physics",
+      "fact_id": 172,
+      "fact_rank": 1,
+      "subcat": [
+        "astrophysics"
+      ],
+      "text": "Valles Marineris: Grabenbruchsystem auf dem Mars: 4000 km lang, bis zu 700 km breit, bis zu 7000 m tief"
+    }
+  ]
+}

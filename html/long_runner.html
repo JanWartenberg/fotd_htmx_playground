@@ -1,0 +1,25 @@
+<section id="downloader" hx-target="this" hx-swap="outerHTML">
+    {% if downloader.status() == "Waiting" %}
+    <button hx-post="/fotd/download">
+        Download Fact Archive
+    </button>
+    {% elif downloader.status() == "Running" %}
+    <div hx-get="/fotd/download" hx-trigger="load delay:500ms">
+        Preparing Download...
+        <div class="progress">
+            <div id="download-progress" class="progress-bar" style="width:{{ downloader.progress() * 100 }}%">{{
+                downloader.progress() * 100 }}%
+            </div>
+        </div>
+    </div>
+    {% elif downloader.status() == "Complete" %}
+    <a id="archive-link" hx-boost="false" href="/fotd/download/file">Facts Downloading! Click here if the download does
+        not start.</a>
+    <button hx-delete="/fotd/download">Clear Download</button>
+    <script>
+        var downloadLink = document.getElementById('archive-link');
+        downloadLink.click();
+    </script>
+    {% endif %}
+
+</section>

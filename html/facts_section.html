@@ -1,0 +1,13 @@
+{% extends 'template.html' %}
+
+{% block facts_section %}
+<section class="facts">
+    <div class="fact-paragraphs">
+    {% include 'fact.html' %}
+    </div>
+    <button type="button" hx-get="/single_fact"
+            hx-target="previous .fact-paragraphs">Give me a new fact
+    </button>
+</section>
+
+{% endblock %}

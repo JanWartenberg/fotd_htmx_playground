@@ -1,0 +1,18 @@
+{
+  "fact_items": [
+    {
+      "cat": "computer science",
+      "fact_id": 1,
+      "fact_rank": 1,
+      "subcat": [
+        "web dev"
+      ],
+      "text": "htmx is a library that combines HTML and JavaScript to build dynamic web interfaces without needing a complex framework"
+    },
+    {
+      "cat": "computer science",
+      "fact_id": 2,
+      "fact_rank": 1,
+      "text": "JDSL („Jay Diesel“) was a brilliant ‚language‘ developed by Tom. Tom is a genius"
+    }
+    ]}
