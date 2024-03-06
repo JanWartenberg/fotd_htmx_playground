@@ -1,3 +1,4 @@
+import os
 from random import random
 import time
 from threading import Thread
@@ -42,4 +43,4 @@ class Downloader:
         return Downloader()
 
     def download_file(self):
-        return r"static\example_fact.json"
+        return os.path.join("static", "example_fact.json")

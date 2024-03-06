@@ -1,4 +1,5 @@
 import json
+import os
 import random
 
 FACT_ITEMS = "fact_items"
@@ -9,7 +10,7 @@ SUBCAT = "subcat"
 FACT_ID = "fact_id"
 FACT_RANK = "fact_rank"
 
-FILEPATH_J = r".\static\facts.json"
+FILEPATH_J = os.path.join("static", "facts.json")
 
 
 class Fotd:

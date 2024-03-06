@@ -7,12 +7,6 @@ app = Flask(__name__, template_folder="html")
 
 app.secret_key = b"Prototaxites"
 
-# TODO
-#   -if bored:
-#       create example factlist
-#    translate rest to en
-#       throw all on github
-
 
 @app.route("/")
 def index():
@@ -24,7 +18,10 @@ def fotd():
     fct = Fotd().get_random_fact_list()
     fact_number = Fotd().get_total_number_of_facts()
     return render_template(
-        "facts_section.html", facts=fct, fact_number=fact_number, downloader=Downloader.get()
+        "facts_section.html",
+        facts=fct,
+        fact_number=fact_number,
+        downloader=Downloader.get(),
     )
 
 
